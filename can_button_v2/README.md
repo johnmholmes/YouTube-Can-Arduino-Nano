@@ -51,6 +51,13 @@ This is a more useful sketch, but still very easy to understand.
    The interrupt is triggered on the falling edge, which means it will be triggered when the signal transitions from high to low.
 
 ----
+In Summary Void setup()
+----
+
+The setup function initializes serial communication, sets up the pin mode for the button with a pull-up resistor, initializes the MCP2515 CAN controller, and attaches an interrupt for handling received messages. The initialization status of the MCP2515 is printed to the Serial Monitor, and if there is an error, the program enters an infinite loop.
+
+----
+
 
 # sendMessage() explained
 
