@@ -22,3 +22,10 @@ PIN 12 = SO
 PIN 13 = SCK
 
 GND and 5 volts also required.
+----
+
+# For explanations of certain functions
+
+See the readme files in the can_button_v2
+
+----
