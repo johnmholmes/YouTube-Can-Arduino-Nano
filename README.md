@@ -6,3 +6,19 @@ This will be used during my learning before moving on to using MERG Cbus protoco
 On the Arduino Nano the MCP2515 requires the use of 7 pins on the Nano.
 
 You will need to install the <mcp_can.h> library for this to compile.
+
+The Arduino Nano requires the following pins to supply the MCP_2515 module
+
+Pins used for connecting the module are.
+
+PIN 2 = INT
+
+PIN 10 = CS
+
+PIN 11 = SI
+
+PIN 12 = SO
+
+PIN 13 = SCK
+
+GND and 5 volts also required.
