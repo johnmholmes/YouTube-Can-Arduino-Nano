@@ -21,7 +21,7 @@ PIN 12 = SO
 
 PIN 13 = SCK
 
-GND and 5 volts also required.
+GND and 5 volts also required and the GND should be joined between units..
 ----
 
 # For explanations of certain functions
