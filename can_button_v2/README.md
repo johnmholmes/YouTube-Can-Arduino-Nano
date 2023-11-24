@@ -4,6 +4,52 @@ This is a more useful sketch, but still very easy to understand.
 
 ----
 
+# Void Setup() Explained
+
+![void sendMessage](https://github.com/johnmholmes/YouTube-Can-Arduino-Nano/assets/60571002/4d3e28c7-c7c4-47e2-a3dc-6ada61c9f8a3)
+
+1. Serial Communication Initialization.
+
+   Serial.begin(115200);
+
+   This line initializes serial communication with a baud rate of 115,200 bps. It allows you to communicate with the Arduino through the Serial Monitor.
+
+2. Pin Mode Setup.
+
+  pinMode(BUTTON_PIN, INPUT_PULLUP);
+
+ This line sets up the specified pin (BUTTON_PIN, which is pin 7) as an input with a pull-up resistor enabled. The INPUT_PULLUP option activates the internal pull-up resistor on the pin.
+
+3. MCP2515 Initialization.
+
+   if (CAN.begin(MCP_ANY, CAN_500KBPS, MCP_8MHZ) == CAN_OK) {
+   
+   Serial.println("MCP2515 Initialized Successfully!");
+
+   CAN.setMode(MCP_NORMAL);
+
+   } else {
+
+   Serial.println("Error Initializing MCP2515...");
+  while (1);
+
+  This block initializes the MCP2515 CAN controller using the CAN.begin function from the MCP_CAN library.
+
+  It specifies the operation mode (MCP_ANY allows the library to automatically detect the mode), the baud rate (CAN_500KBPS), and the crystal frequency (MCP_8MHZ).
+
+  If initialization is successful (indicated by CAN_OK), it prints a success message and sets the mode to MCP_NORMAL.
+
+  If initialization fails, it prints an error message and enters an infinite loop (while (1);), effectively stopping the program.
+
+4. Interrupt Setup.
+
+   attachInterrupt(digitalPinToInterrupt(CAN_INT_PIN), receiveISR, FALLING);
+
+  This line attaches an interrupt to the specified pin (CAN_INT_PIN, which is pin 2) with the receiveISR function as the interrupt service routine (ISR).
+
+  The interrupt is triggered on the falling edge, which means it will be triggered when the signal transitions from high to low.
+
+----
 
 # I will explain sendMessage()
 
