@@ -59,7 +59,7 @@ This is a more useful sketch, but still very easy to understand.
    These lines print a confirmation message to the Serial Monitor indicating that the message has been sent.
 
    It prints both the static text "Message Sent: " and the actual message passed as the parameter (message).
-
+----
 #In summary 
 
 The sendMessage function takes a message as a parameter, copies it to a buffer, sends a CAN message with the specified ID and data length, and then prints a confirmation message to the Serial Monitor. This function is designed to be a convenient way to send messages over the CAN bus with minimal code duplication.
