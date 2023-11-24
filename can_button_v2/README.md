@@ -16,6 +16,20 @@ I will explain sendMessage()
 
    const char* message: The function takes a parameter named message, which is a pointer to a constant character (a string).
 
-2. Local Variables.
+2. Initalise Buffer.
+
+   byte msg[16] = {0};
+
+   This line declares an array of 16 bytes named msg and initializes all elements to zero.
+
+3. Copy Message to Buffer.
+
+   strncpy((char*)msg, message, 16);
+
+   strncpy is a function that copies characters from one string to another.
+
+   In this case, it copies characters from the message parameter (which is a C-style string) to the msg buffer.
+
+   The (char*) cast is used to convert the msg buffer from byte to char type, as strncpy works with char arrays.
 
    
