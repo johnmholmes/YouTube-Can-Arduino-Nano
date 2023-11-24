@@ -32,4 +32,34 @@ I will explain sendMessage()
 
    The (char*) cast is used to convert the msg buffer from byte to char type, as strncpy works with char arrays.
 
+4. Create CAN Message and Send.
+
+   CAN.sendMsgBuf(0x123, 0, 2, msg);
+
+   CAN.sendMsgBuf is a function from the MCP_CAN library that sends a message on the CAN bus.
+
+   It takes four arguments:
+
+   0x123: The message ID (arbitrary in this example; you can replace it with your desired ID).
+
+   0: The message object (use 0 for standard messages).
+
+   2: The length of the data in bytes (assuming "on" or "off" is a 2-character message).
+
+   msg: The data buffer containing the message.
+
+5. Print to Serial Monitor.
+
+   Serial.print("Message Sent: ");
+   Serial.println(message);
+
+   These lines print a confirmation message to the Serial Monitor indicating that the message has been sent.
+
+   It prints both the static text "Message Sent: " and the actual message passed as the parameter (message).
+
+#In summary 
+
+The sendMessage function takes a message as a parameter, copies it to a buffer, sends a CAN message with the specified ID and data length, and then prints a confirmation message to the Serial Monitor. This function is designed to be a convenient way to send messages over the CAN bus with minimal code duplication.
+
+----
    
