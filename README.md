@@ -24,6 +24,7 @@ PIN 13 = SCK
 GND and 5 volts also required and the GND should be joined between units.
 
 Also remember the ends of the bus need the termination resister connected on the MCP 2515 boards
+
 ----
 
 # For explanations of certain functions
