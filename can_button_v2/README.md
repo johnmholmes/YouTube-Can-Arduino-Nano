@@ -1,5 +1,21 @@
-# Can_send
+# Can_Button_v2
 
-This was my first test sketch and is used to send 2 messages to the bus.
+This is a more useful sketch, but still very easy to understand.
 
-On & of I decided to use a shortend message for off to keep things simple.
+I will explain sendMessage()
+
+![void sendMessage](https://github.com/johnmholmes/YouTube-Can-Arduino-Nano/assets/60571002/64575530-bc20-4942-8d3f-54a77cdd3f8b)
+
+1. Function Signiture.
+
+   void sendMessage(const char* message) {
+
+   void: The function does not return any value.
+
+   sendMessage: The name of the function.
+
+   const char* message: The function takes a parameter named message, which is a pointer to a constant character (a string).
+
+2. Local Variables.
+
+   
