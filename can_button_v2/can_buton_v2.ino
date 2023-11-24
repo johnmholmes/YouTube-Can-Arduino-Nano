@@ -1,6 +1,23 @@
 #include <SPI.h>
 #include <mcp_can.h>
 
+/*
+This sketch is for testing an Arduino Nano using the MCP2515 module using spi
+
+Pins used for connecting the module are.
+PIN 2 = INT
+PIN 10 = CS
+PIN 11 = SI
+PIN 12 = SO
+PIN 13 = SCK
+
+GND and 5 volts also required.
+
+we also have a push button on PIN 7
+
+This sketch only sends a message when the state changes it does use a delay of 100ms in its to avoid button debounce
+*/
+
 const int SPI_CS_PIN = 10;  // Chip Select pin for MCP2515
 const int CAN_INT_PIN = 2; // Interrupt pin for MCP2515
 const int BUTTON_PIN = 7;  // Pin to read the state of the button
