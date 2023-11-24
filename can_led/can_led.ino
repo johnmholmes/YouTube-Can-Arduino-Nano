@@ -13,7 +13,7 @@ PIN 13 = SCK
 
 GND and 5 volts also required.
 
-If the module receives a message on the can bus of "on or of" ti will turn onan led on PIN 7
+If the module receives a message on the can bus of "on or of" this will turn on an led on PIN 7
 */
 
 const int SPI_CS_PIN = 10;  // Chip Select pin for MCP2515
