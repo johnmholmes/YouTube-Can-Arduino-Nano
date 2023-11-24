@@ -1,8 +1,5 @@
-# YouTube-Can-Arduino-Nano
-A simple set of Can Sketches for an Arduino Nano using a MCP 2515 can module
+# Can_send
 
-This will be used during my learning before moving on to using MERG Cbus protocol for a model railway aplication.
+This was my first test sketch and is used to send 2 messages to the bus.
 
-On the Arduino Nano the MCP2515 requires the use of 7 pins on the Nano.
-
-You will need to install the <mcp_can.h> library for this to compile.
+On & of I decided to use a shortend message for off to keep things simple.
