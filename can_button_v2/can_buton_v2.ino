@@ -54,7 +54,7 @@ void loop() {
     if (buttonState == HIGH) {
       sendMessage("on");
     } else {
-      sendMessage("of");
+      sendMessage("off");
     }
 
     // Update the previous state to the current state
