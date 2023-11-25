@@ -25,6 +25,8 @@ GND and 5 volts also required and the GND should be joined between units.
 
 Also remember the ends of the bus need the termination resister connected on the MCP 2515 boards
 
+![Screenshot 2023-11-25 083645](https://github.com/johnmholmes/YouTube-Can-Arduino-Nano/assets/60571002/53089285-e6ed-4b93-a4d2-de7615801de3)
+
 ----
 
 # For explanations of certain functions
