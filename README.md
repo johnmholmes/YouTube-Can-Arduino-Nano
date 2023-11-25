@@ -34,3 +34,13 @@ Also remember the ends of the bus need the termination resister connected on the
 See the readme files in the can_button_v2
 
 ----
+
+# Latest software added
+
+ 25 Novemeber
+ 
+can_buttons - this allows for to inputs on pins 6 & 7 to send data on the bus.
+
+can_led2 - This will switch the leds on pins 6 & 7 when the data is recived.
+
+
