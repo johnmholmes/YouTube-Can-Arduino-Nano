@@ -69,7 +69,7 @@ void sendMessage(const char* message) {
   strncpy((char*)msg, message, 16); // Copy the message to the buffer
 
   // Create a CAN message
-  CAN.sendMsgBuf(0x123, 0, 3, msg); // Assuming "on" or "of" is a 2-character message
+  CAN.sendMsgBuf(0x123, 0, 3, msg); // Assuming "on" or "off" is a 3-character message
 
   Serial.print("Message Sent: ");
   Serial.println(message);
