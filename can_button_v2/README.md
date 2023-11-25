@@ -101,7 +101,7 @@ The setup function initializes serial communication, sets up the pin mode for th
 
    0: The message object (use 0 for standard messages).
 
-   2: The length of the data in bytes (assuming "on" or "off" is a 2-character message).
+   2: The length of the data in bytes (assuming "on" or "off" is a 2/3-character message).
 
    msg: The data buffer containing the message.
 
