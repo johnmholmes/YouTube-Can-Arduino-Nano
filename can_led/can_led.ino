@@ -67,14 +67,14 @@ void receiveISR() {
     Serial.println();
 
     // Check if the received message is "on"
-    if (len == 2 && rxBuf[0] == 'o' && rxBuf[1] == 'n') {
+    if (len == 3 && rxBuf[0] == 'o' && rxBuf[1] == 'n') {
       // Turn on the LED
       digitalWrite(LED_PIN, HIGH);
       Serial.println("LED Turned On!");
     }
 
         // Check if the received message is "of"
-    if (len == 2 && rxBuf[0] == 'o' && rxBuf[1] == 'f') {
+    if (len == 3 && rxBuf[0] == 'o' && rxBuf[1] == 'f'  && rxBuf[2] == 'f') {
       // Turn off the LED
       digitalWrite(LED_PIN, LOW);
       Serial.println("LED Turned Off!");
