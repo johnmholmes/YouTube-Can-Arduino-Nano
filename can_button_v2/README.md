@@ -6,7 +6,7 @@ This is a more useful sketch, but still very easy to understand.
 
 # Void Setup() Explained
 
-![void sendMessage](https://github.com/johnmholmes/YouTube-Can-Arduino-Nano/assets/60571002/4d3e28c7-c7c4-47e2-a3dc-6ada61c9f8a3)
+![void setup](https://github.com/johnmholmes/YouTube-Can-Arduino-Nano/assets/60571002/65135323-77c3-48f6-819b-0c4a34e86adb)
 
 1. Serial Communication Initialization.
 
