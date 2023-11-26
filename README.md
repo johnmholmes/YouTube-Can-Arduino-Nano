@@ -41,6 +41,12 @@ See the readme files in the can_button_v2
  
 can_buttons - this allows for to inputs on pins 6 & 7 to send data on the bus.
 
-can_led2 - This will switch the leds on pins 6 & 7 when the data is recived.
+can_led2 - This will toggle the leds on pins 6 & 7 when the data is recived.
+
+----
+
+# Next sketch to be added
+
+Can_Button_led - this will be a consumer as well as a producer.
 
 
