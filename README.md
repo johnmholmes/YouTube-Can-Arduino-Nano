@@ -41,7 +41,7 @@ Can Bus Introduction Keeping it Simple Part 2 Can_led https://youtu.be/QWkKpsVkf
 
  25 Novemeber
  
-can_buttons - this allows for to inputs on pins 6 & 7 to send data on the bus.
+can_buttons_v1 - this allows for to inputs on pins 6 & 7 to send data on the bus.
 
 can_led2 - This will toggle the leds on pins 6 & 7 when the data is recived.
 
