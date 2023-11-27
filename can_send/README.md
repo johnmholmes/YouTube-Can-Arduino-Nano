@@ -2,4 +2,8 @@
 
 This was my first test sketch and is used to send 2 messages to the bus.
 
-On & of I decided to use a shortend message for off to keep things simple.
+A 9 minute video is available on Youtub
+
+https://youtu.be/nReYv7AuRKM
+
+
