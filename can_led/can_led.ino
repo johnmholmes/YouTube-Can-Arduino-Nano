@@ -24,7 +24,7 @@ MCP_CAN CAN(SPI_CS_PIN);
 
 void setup() {
   Serial.begin(115200);
-  pinMode(LED_PIN, OUTPUT);
+  pinMode(LED_PIN, OUTPUT); //Set the pin as an output
 
   // Initialize MCP2515
   if (CAN.begin(MCP_ANY, CAN_500KBPS, MCP_8MHZ) == CAN_OK) {
