@@ -29,6 +29,14 @@ Also remember the ends of the bus need the termination resister connected on the
 
 ----
 
+# I now have some videos available.
+
+Can Bus Introduction Keeping it Simple Part 1 Can_send  https://youtu.be/nReYv7AuRKM
+
+Can Bus Introduction Keeping it Simple Part 2 Can_led https://youtu.be/QWkKpsVkfYs
+
+----
+
 # For explanations of certain functions
 
 See the readme files in the can_button_v2
