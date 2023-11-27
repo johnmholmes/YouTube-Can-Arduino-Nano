@@ -37,12 +37,6 @@ Can Bus Introduction Keeping it Simple Part 2 Can_led https://youtu.be/QWkKpsVkf
 
 ----
 
-# For explanations of certain functions
-
-See the readme files in the can_button_v2
-
-----
-
 # Latest software added
 
  25 Novemeber
