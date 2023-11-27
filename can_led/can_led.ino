@@ -18,7 +18,7 @@ If the module receives a message on the can bus of "on or of" this will turn on 
 
 const int SPI_CS_PIN = 10;  // Chip Select pin for MCP2515
 const int CAN_INT_PIN = 2; // Interrupt pin for MCP2515
-const int LED_PIN = 7;     // Built-in LED pin
+const int LED_PIN = 7;     // led used on pin 7 of the nano
 
 MCP_CAN CAN(SPI_CS_PIN);
 
