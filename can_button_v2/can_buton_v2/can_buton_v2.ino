@@ -49,7 +49,7 @@ void loop() {
   int buttonState = digitalRead(BUTTON_PIN);
 
   // Check for a state change
-  if (buttonState != previousButtonState) {
+  if (buttonState != previousButtonState) { //added code
     // Send a message based on the button state
     if (buttonState == HIGH) {
       sendMessage("on");
