@@ -2,6 +2,8 @@
 
 https://youtu.be/KHAcO5UrAmc
 
+This video explain the basic changes to button v 1
+
 This is a more useful sketch, but still very easy to understand.
 
 here you can see the messages recived onto the bus.
