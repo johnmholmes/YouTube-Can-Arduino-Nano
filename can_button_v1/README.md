@@ -6,6 +6,10 @@ this video explains the sketch. it is not a good way to send a message but I fel
 
 ----
 
+# Wiring Diagram
+
+![Screenshot 2023-11-30 031327](https://github.com/johnmholmes/YouTube-Can-Arduino-Nano/assets/60571002/00e0a0ba-4fff-4056-9b48-482971bb4e5b)
+
 # Void Setup() Explained
 
 ![void setup](https://github.com/johnmholmes/YouTube-Can-Arduino-Nano/assets/60571002/65135323-77c3-48f6-819b-0c4a34e86adb)
