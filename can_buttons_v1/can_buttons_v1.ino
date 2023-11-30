@@ -8,12 +8,12 @@ const int PIN_7 = 7;        // Input pin 7
 
 MCP_CAN CAN(SPI_CS_PIN);
 
-int previousState6 = HIGH;
+int previousState6 = HIGH; // hold the previous states
 int previousState7 = HIGH;
 
 void setup() {
   Serial.begin(115200);
-  pinMode(PIN_6, INPUT_PULLUP);
+  pinMode(PIN_6, INPUT_PULLUP); //Setup the pins as inputs
   pinMode(PIN_7, INPUT_PULLUP);
 
   // Initialize MCP2515
