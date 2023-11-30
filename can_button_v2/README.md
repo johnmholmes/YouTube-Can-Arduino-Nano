@@ -4,10 +4,6 @@ https://youtu.be/KHAcO5UrAmc
 
 This video explain the basic changes to button v 1
 
-wiring diagram.
-
-![Screenshot 2023-11-30 030850](https://github.com/johnmholmes/YouTube-Can-Arduino-Nano/assets/60571002/2d105915-c624-40b1-bf79-94ae60b2b14b)
-
 This is a more useful sketch, but still very easy to understand.
 
 here you can see the messages recived onto the bus.
