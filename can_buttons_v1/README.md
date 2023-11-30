@@ -15,4 +15,9 @@ To recieve the message and activate the leds on pin 6 & 7
 
 ![Screenshot 2023-11-30 030850](https://github.com/johnmholmes/YouTube-Can-Arduino-Nano/assets/60571002/44839d6b-9ceb-44c5-827d-98cda79d8e2d)
 
+----
+
+# Message as sent out on the bus
+
+![Uploading Screenshot 2023-11-29 080228.jpg…]()
 
