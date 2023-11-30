@@ -1,3 +1,19 @@
+# Arduino CAN Bus Introduction Series Using MCP_CAN Library
+
+The idea is to demonstrate how quickly you can get started using the well-documented Arduino library for controlling the general input and output pins of an Arduino Nano in these examples. This can be easily adapted to other versions of Arduino or even ESP32 when using the MCP2515 modules readily available from various vendors.
+
+There are other libraries available with their own protocols, as mentioned in video 1. However, these require additional libraries to implement some of the advanced features deemed important by their creators.
+
+Learning Structure:
+
+By taking small steps, you will see how, with little knowledge of using CAN, you can send a message to another Arduino on the 2-wire bus.
+
+While the first few sketches may seem pointless, they provide a starting point for building your own knowledge in this useful bus protocol.
+
+Other tutorials often delve straight into the arbitration of CAN Bus and the message frame, which can be challenging to grasp initially. That's why I've kept it quite simple.
+
+----
+
 # YouTube-Can-Arduino-Nano
 A simple set of Can Sketches for an Arduino Nano using a MCP 2515 can module
 
