@@ -47,15 +47,26 @@ Also remember the ends of the bus need the termination resister connected on the
 
 # I now have some videos available.
 
-Can Bus Introduction Keeping it Simple Part 1 Can_send  https://youtu.be/nReYv7AuRKM
+Can Bus Introduction Keeping it Simple Part 1 can_send  https://youtu.be/nReYv7AuRKM
 
-Can Bus Introduction Keeping it Simple Part 2 Can_led https://youtu.be/QWkKpsVkfYs
+Can Bus Introduction Keeping it Simple Part 2 can_led https://youtu.be/QWkKpsVkfYs
+
+Can Bus Introduction Part 3 can_buttonv1 https://youtu.be/UP8DhyaETAk
+
+Can Bus Introduction Part 4 Cables and Frequencies  https://youtu.be/fLdaum8oW4s
+
+Can Bus Introduction Part 5 can_buttonv2 https://youtu.be/KHAcO5UrAmc
+
+Can Bus Introduction Part 6 can_buttonsv 1 2 input producer https://youtu.be/iX94LOcw23w
 
 ----
 
 # Latest software added
 
  25 Novemeber
+
+
+can_led show how to read the message recieved
  
 can_buttons_v1 - this allows for to inputs on pins 6 & 7 to send data on the bus.
 
