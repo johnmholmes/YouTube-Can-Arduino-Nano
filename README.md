@@ -63,8 +63,11 @@ Can Bus Introduction Part 6 can_buttonsv 1 2 input producer https://youtu.be/iX9
 
 # Latest software added
 
- 25 Novemeber
+1 December 
 
+prod_consumer_v1 - This builds on the buttons_v1 sketch to toggle an led on pin 5 when a messaage is recived from a can id of 0x124 with the data 7:0 or 7:1 
+
+25 Novemeber
 
 can_led show how to read the message recieved
  
