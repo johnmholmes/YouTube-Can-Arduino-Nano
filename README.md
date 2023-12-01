@@ -59,6 +59,8 @@ Can Bus Introduction Part 5 can_buttonv2 https://youtu.be/KHAcO5UrAmc
 
 Can Bus Introduction Part 6 can_buttonsv 1 2 input producer https://youtu.be/iX94LOcw23w
 
+Can Bus Introduction Part 7 can_led2 2 led consumer https://youtu.be/4tY41bF1wNc
+
 ----
 
 # Latest software added
