@@ -63,6 +63,8 @@ Can Bus Introduction Part 7 can_led2 2 led consumer https://youtu.be/4tY41bF1wNc
 
 Can Bus Introduction Part 8 prod_consumer_v1 https://youtu.be/Bwbq02Fw1-k
 
+Can Bus Introduction Part 9 Arbitration https://youtu.be/fJrD0e44Bxg
+
 ----
 
 # Latest software added
