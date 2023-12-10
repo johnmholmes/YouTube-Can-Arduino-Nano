@@ -43,6 +43,10 @@ Also remember the ends of the bus need the termination resister connected on the
 
 ![Screenshot 2023-11-25 083645](https://github.com/johnmholmes/YouTube-Can-Arduino-Nano/assets/60571002/53089285-e6ed-4b93-a4d2-de7615801de3)
 
+I would use these connectors
+
+![Screenshot 2023-12-10 041615](https://github.com/johnmholmes/YouTube-Can-Arduino-Nano/assets/60571002/3804aa74-2c97-42f4-8cb1-6f1d14a9fdfb)
+
 ----
 
 # I now have some videos available.
