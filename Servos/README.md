@@ -7,3 +7,10 @@ Among the available pins on the Arduino Nano namely, 3, 5, 6, 9, 10, and 11,  pi
 ## Servo.h Arduino Library
 
 This library is well documented via the Arduino website. As far as I am currently aware there are no issues when uising it with the Mcp_can or spi libraries.
+
+
+## Servo Calabration
+
+On a layout each servo would need to be calibrated to ensure that a turnout attached to it would reach its closed and thrown positions. Then you could hard code these setting within the sketch.
+
+You could also use a for loop to add slow motion for a ore realistic action. you would need to think about how long it takes to complete the move, as this could effect other messages either being sent or received by the unit.
