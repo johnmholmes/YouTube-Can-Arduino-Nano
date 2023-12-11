@@ -89,6 +89,6 @@ can_led2 - This will toggle the leds on pins 6 & 7 when the data is received.
 
 # Next sketch to be added
 
-not sure yet
+A simple servo sketch see the servo folder
 
 
