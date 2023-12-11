@@ -4,6 +4,10 @@ In the realm of model railway layouts, the SG90 servos have gained popularity fo
 
 Among the available pins on the Arduino Nano namely, 3, 5, 6, 9, 10, and 11,  pins 10 and 11 are typically allocated for the Mcp2515 module. This configuration allows for the simultaneous control of up to four servos. However, for optimal performance, I recommend limiting each Arduino Nano to a maximum of two attached servos.
 
+## YouTube Video
+
+https://youtu.be/h2quRGER9Is
+
 ## Servo.h Arduino Library
 
 This library is well documented via the Arduino website. As far as I am currently aware there are no issues when uising it with the Mcp_can or spi libraries.
