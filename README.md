@@ -14,6 +14,12 @@ Other tutorials often delve straight into the arbitration of CAN Bus and the mes
 
 ----
 
+# Take a look at the Wiki
+
+I have added a Wiki page for this repository which is easier to work with and present stuff in the future.
+
+----
+
 # YouTube-Can-Arduino-Nano
 A simple set of Can Sketches for an Arduino Nano using a MCP 2515 can module
 
