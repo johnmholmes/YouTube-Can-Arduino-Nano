@@ -1,4 +1,4 @@
-#Fundamentals of Servo Control
+# Fundamentals of Servo Control
 
 In the realm of model railway layouts, the SG90 servos have gained popularity for their affordability. These servos employ pulse width modulation (PWM) to precisely define angles. Consequently, it's imperative to connect the servo to a pin on the Arduino Nano that supports PWM.
 
