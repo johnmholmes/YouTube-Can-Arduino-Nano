@@ -1,9 +1,3 @@
-# Can_send
+# Basic testing examples.
 
-This was my first test sketch and is used to send 2 messages to the bus.
-
-A 9 minute video is available on Youtub
-
-https://youtu.be/nReYv7AuRKM
-
-
+See page 7 of the Wiki for more details
