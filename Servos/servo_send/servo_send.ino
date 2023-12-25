@@ -32,13 +32,13 @@ void loop() {
   sendCANMessage(0x0123, 2, 7, 1);
   Serial.println("Sent CAN message: 7:1");
 
-  delay(5000); // Wait for 5 seconds
+  delay(20000); // Wait for 5 seconds
 
   // Send CAN message 7:0
   sendCANMessage(0x0123, 2, 7, 0);
   Serial.println("Sent CAN message: 7:0");
 
-  delay(5000); // Wait for 5 seconds
+  delay(20000); // Wait for 5 seconds
 }
 
 void sendCANMessage(unsigned long id, byte length, byte data0, byte data1) {
