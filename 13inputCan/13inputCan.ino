@@ -4,7 +4,7 @@ for a mimic panel.
 
 This node has the Can Id of 001 which will give it the highest priority on the bus.
 
-If you need another module to add mre inputs reuse this sketch but change the Can Id to 002
+If you need another module to add more inputs reuse this sketch but change the Can Id to 002
 
 Pins A6 & A7 are analog pins so are not used.
 
