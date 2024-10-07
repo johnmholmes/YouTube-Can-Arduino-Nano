@@ -1,22 +1,34 @@
 #include <SPI.h>
 #include <mcp_can.h>
 
+/*
+This sketch is for testing an Arduino Nano using the MCP2515 module using SPI
+
+Pins used for connecting the module are:
+PIN 2 = INT
+PIN 10 = CS
+PIN 11 = SI
+PIN 12 = SO
+PIN 13 = SCK
+
+GND and 5 volts also required.
+
+If the module receives a message on the CAN bus of "on" or "of", this will turn on/off an LED on PIN 7.
+*/
+
 const int SPI_CS_PIN = 10;  // Chip Select pin for MCP2515
 const int CAN_INT_PIN = 2;  // Interrupt pin for MCP2515
-const int LED_PIN_6 = 6;    // LED pin for pin 6
-const int LED_PIN_7 = 7;    // LED pin for pin 7
+const int LED_PIN = 7;      // LED used on pin 7 of the Nano
 
 MCP_CAN CAN(SPI_CS_PIN);
 
 void setup() {
   Serial.begin(115200);
-  pinMode(LED_PIN_6, OUTPUT);
-  pinMode(LED_PIN_7, OUTPUT);
+  pinMode(LED_PIN, OUTPUT); // Set the pin as an output
 
   // Initialize MCP2515
-  if (CAN.begin(MCP_ANY, CAN_125KBPS, MCP_8MHZ) == CAN_OK) {
+  if (CAN.begin(CAN_500KBPS, 8000000) == CAN_OK) {
     Serial.println("MCP2515 Initialized Successfully!");
-    CAN.setMode(MCP_NORMAL);
   } else {
     Serial.println("Error Initializing MCP2515...");
     while (1);
@@ -27,53 +39,43 @@ void setup() {
 }
 
 void loop() {
-  // Your main code can go here if needed
+  // Nothing to do here since the receiveISR will handle incoming messages
 }
 
 void receiveISR() {
-  // Handle the interrupt here
-  // Note: In this example, we're actively receiving and processing messages
-  // You can add your own logic here based on the received messages
-  receiveMessages();
-}
+  // Declare variables for storing received message data
+  uint8_t len;
+  uint8_t rxBuf[8]; // Buffer to store CAN message data
 
-void receiveMessages() {
-  unsigned long rxId;
-  byte len;
-  byte rxBuf[8];
+  // Check if there's a message available
+  if (CAN.checkReceive() == CAN_MSGAVAIL) {
+    // Read the message (length and data buffer)
+    CAN.readMsgBuf(&len, rxBuf);
 
-  if (CAN.checkReceive()) {
-    CAN.readMsgBuf(&rxId, &len, rxBuf);
+    // Get the message ID (optional, not always needed for simple tasks)
+    unsigned long rxId = CAN.getCanId();
 
-    // Print received message details
+    // Print the received message to the Serial Monitor
     Serial.print("Received Message ID: 0x");
     Serial.print(rxId, HEX);
     Serial.print(" Data: ");
-
-    // Print message data
     for (int i = 0; i < len; i++) {
       Serial.print((char)rxBuf[i]);
     }
-
     Serial.println();
 
-    // Process the received message
-    processMessage(rxId, rxBuf, len);
+    // Check if the received message is "on"
+    if (len == 2 && rxBuf[0] == 'o' && rxBuf[1] == 'n') {
+      // Turn on the LED
+      digitalWrite(LED_PIN, HIGH);
+      Serial.println("LED Turned On!");
+    }
+
+    // Check if the received message is "of"
+    if (len == 2 && rxBuf[0] == 'o' && rxBuf[1] == 'f') {
+      // Turn off the LED
+      digitalWrite(LED_PIN, LOW);
+      Serial.println("LED Turned Off!");
+    }
   }
 }
-
-void processMessage(unsigned long rxId, byte* rxBuf, byte len) {
-  // Extract pin and state information from the message
-  int pin;
-  int state;
-  sscanf((char*)rxBuf, "%d:%d", &pin, &state);
-
-  // Act on the received information
-  if (pin == 6) {
-    digitalWrite(LED_PIN_6, state);
-  } else if (pin == 7) {
-    digitalWrite(LED_PIN_7, state);
-  }
-}
-
-
