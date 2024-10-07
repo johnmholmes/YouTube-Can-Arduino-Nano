@@ -70,9 +70,9 @@ void setup() {
   pinMode(PIN_14, INPUT_PULLUP);
   pinMode(PIN_15, INPUT_PULLUP);
 
-  if (CAN.begin(MCP_ANY, CAN_125KBPS, MCP_8MHZ) == CAN_OK) {
+  if (CAN.begin(CAN_125KBPS, 8000000) == CAN_OK) {
     Serial.println("MCP2515 Initialized Successfully!");
-    CAN.setMode(MCP_NORMAL);
+    
   } else {
     Serial.println("Error Initializing MCP2515...");
     while (1);
