@@ -1,65 +1,76 @@
 #include <SPI.h>
-#include <mcp_can.h>
+#include <mcp_can.h>   // ← Use coryjfowler/MCP_CAN_lib  (install via Library Manager)
 
 /*
-This sketch is for testing an Arduino Nano using the MCP2515 module using spi
+   Test sketch for Arduino Nano + MCP2515 module
+   Pins:
+     10 = CS
+     2  = INT
+     11 = MOSI
+     12 = MISO
+     13 = SCK
+     + GND + 5V
 
-Pins used for connecting the module are.
-PIN 2 = INT
-PIN 10 = CS
-PIN 11 = SI
-PIN 12 = SO
-PIN 13 = SCK
-
-GND and 5 volts also required.
-
-The module sends 2 messages on the can bus of "on or of" 
+   Sends alternating "on" and "of" messages every ~5 seconds
 */
 
-const int SPI_CS_PIN = 10;  // Chip Select pin for MCP2515
-const int CAN_INT_PIN = 2; // Interrupt pin for MCP2515
+const int SPI_CS_PIN  = 10;
+const int CAN_INT_PIN = 2;
 
-MCP_CAN CAN(SPI_CS_PIN);
+MCP_CAN CAN(SPI_CS_PIN);   // Set CS pin
 
 void setup() {
   Serial.begin(115200);
+  while (!Serial);           // Wait for serial (good practice on some boards)
+
+  Serial.println("Starting CAN test...");
 
   // Initialize MCP2515
-  if (CAN.begin(CAN_500KBPS, 8000000) == CAN_OK) {
+  //               mode      baud       crystal
+  if (CAN.begin(MCP_ANY, CAN_500KBPS, MCP_8MHZ) == CAN_OK) {
     Serial.println("MCP2515 Initialized Successfully!");
-    
   } else {
-    Serial.println("Error Initializing MCP2515...");
-    while (1);
+    Serial.println("Error Initializing MCP2515 - check wiring / crystal freq / module");
+    while (1);  // halt
   }
 
-  // Attach interrupt for receiving messages
-  attachInterrupt(digitalPinToInterrupt(CAN_INT_PIN), receiveISR, FALLING);
+  // Optional: set normal mode explicitly (some versions need this)
+  CAN.setMode(MCP_NORMAL);
+
+  // Optional: attach interrupt if you later want to receive messages
+  // pinMode(CAN_INT_PIN, INPUT_PULLUP);
+  // attachInterrupt(digitalPinToInterrupt(CAN_INT_PIN), receiveISR, FALLING);
 }
 
 void loop() {
-  // Send "on" message
   sendMessage("on");
-  delay(5000); // Send the message every second
+  delay(5000);
   sendMessage("of");
-  delay(5000); // Send the message every second
+  delay(5000);
 }
 
-void sendMessage(const char* message) {
-  byte msg[16] = {0};  // Change char to byte
-  strncpy((char*)msg, message, 16); // Copy the message to the buffer
+void sendMessage(const char* text) {
+  byte msg[8] = {0};           // most CAN messages use ≤ 8 bytes
+  size_t len = strlen(text);
+  if (len > 8) len = 8;
+  memcpy(msg, text, len);
 
-  // Create a CAN message
-  CAN.sendMsgBuf(0x123, 0, 2, msg); // Assuming "on" is a 2-character message
+  // Send standard frame, ID 0x123, data length = 2 (even if we send more, 2 is fine for "on"/"of")
+  byte sndStat = CAN.sendMsgBuf(0x123, 0, 2, msg);
 
-  Serial.print("Message Sent: ");
-  Serial.println(message);
+  if (sndStat == CAN_OK) {
+    Serial.print("Message sent successfully: ");
+  } else {
+    Serial.print("Send failed with error code: ");
+    Serial.print(sndStat);
+    Serial.print(" → ");
+  }
+  Serial.println(text);
 }
 
 void receiveISR() {
-  // Handle the interrupt here if needed
-  // Note: In this example, we're just sending messages and not actively receiving them
+  // You can add receive code here later if needed
+  // For now it's empty
 }
-
 
 
