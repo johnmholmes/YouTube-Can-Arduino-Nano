@@ -1,5 +1,7 @@
 # This repository is aimed at beginners.
 
+## 21 feb 2026 these sketches need to be reworked due to library changes. will see if Ican rig up a new test plank
+
 Its will introduce you to the idea of using a Can bus for a model railway without the use of a pc after configuring the nodes.
 
 
